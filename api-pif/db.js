@@ -9,5 +9,9 @@ function findAll(callback){
     global.conn.collection("customers").find({}).toArray(callback);
 }
 
-module.exports = { findAll }
+function insert(customer, callback){
+    global.conn.collection("customers").insert(customer, callback);
+}
+
+module.exports = { findAll, insert }
 

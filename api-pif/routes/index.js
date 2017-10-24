@@ -9,4 +9,17 @@ router.get('/', function(req, res) {
   })
 })
 
+router.get('/new', function(req, res, next) {
+  res.render('new', { title: 'Novo Cadastro' });
+});
+
+router.post('/new', function(req, res) {
+  var nome = req.body.nome;
+  var idade = parseInt(req.body.idade);
+  global.db.insert({nome, idade}, (err, result) => {
+          if(err) { return console.log(err); }
+          res.redirect('/');
+      })
+})
+
 module.exports = router;
