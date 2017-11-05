@@ -34,4 +34,6 @@ router.post('/new', function(req, res) {
       })
 })
 
+
+//comentario de teste
 module.exports = router;
