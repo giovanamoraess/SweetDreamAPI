@@ -1,11 +1,23 @@
 var express = require('express');
 var router = express.Router();
 
+
 /* GET home page. */
 router.get('/', function(req, res) {
   global.db.findAll((e, docs) => {
       if(e) { return console.log(e); }
-      res.render('index', { title: 'Lista de Clientes', docs: docs });
+      res.status(200).send({
+       	docs
+      });
+  })
+})
+
+router.get('/produtos', function(req, res) {
+  global.db.findAllProdutos((e, docs) => {
+      if(e) { return console.log(e); }
+      res.status(200).send({
+       	docs
+      });
   })
 })
 
