@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweetDream.API", "SweetDream.API\SweetDream.API.csproj", "{63F74E48-4091-4AB4-8F35-964C94F19C2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweetDream.Model", "SweetDream.Model\SweetDream.Model.csproj", "{4BBC1135-D19D-4423-AED3-79E61FD7140E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweetDream.Data", "SweetDream.Data\SweetDream.Data.csproj", "{00A80B4F-A585-4027-90A3-D9A06981AF25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweetDream.DataContracts", "SweetDream.DataContracts\SweetDream.DataContracts.csproj", "{F628B430-6FE4-439A-8631-F00B69038108}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste", "Teste\Teste.csproj", "{128346E3-5920-4944-8CAF-C40F2A589DF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweetDream.Business", "SweetDream.Business\SweetDream.Business.csproj", "{F6F5267B-8488-4FC4-9B1F-B4A02F738D09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SweetDream.Infrastructure", "SweetDream.Infrastructure\SweetDream.Infrastructure.csproj", "{916A9464-4D2B-4FF5-971B-4AD84C788F81}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63F74E48-4091-4AB4-8F35-964C94F19C2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63F74E48-4091-4AB4-8F35-964C94F19C2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63F74E48-4091-4AB4-8F35-964C94F19C2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63F74E48-4091-4AB4-8F35-964C94F19C2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BBC1135-D19D-4423-AED3-79E61FD7140E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BBC1135-D19D-4423-AED3-79E61FD7140E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BBC1135-D19D-4423-AED3-79E61FD7140E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BBC1135-D19D-4423-AED3-79E61FD7140E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00A80B4F-A585-4027-90A3-D9A06981AF25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00A80B4F-A585-4027-90A3-D9A06981AF25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00A80B4F-A585-4027-90A3-D9A06981AF25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00A80B4F-A585-4027-90A3-D9A06981AF25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F628B430-6FE4-439A-8631-F00B69038108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F628B430-6FE4-439A-8631-F00B69038108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F628B430-6FE4-439A-8631-F00B69038108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F628B430-6FE4-439A-8631-F00B69038108}.Release|Any CPU.Build.0 = Release|Any CPU
+		{128346E3-5920-4944-8CAF-C40F2A589DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{128346E3-5920-4944-8CAF-C40F2A589DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{128346E3-5920-4944-8CAF-C40F2A589DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{128346E3-5920-4944-8CAF-C40F2A589DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6F5267B-8488-4FC4-9B1F-B4A02F738D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F5267B-8488-4FC4-9B1F-B4A02F738D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F5267B-8488-4FC4-9B1F-B4A02F738D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F5267B-8488-4FC4-9B1F-B4A02F738D09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{916A9464-4D2B-4FF5-971B-4AD84C788F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{916A9464-4D2B-4FF5-971B-4AD84C788F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{916A9464-4D2B-4FF5-971B-4AD84C788F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{916A9464-4D2B-4FF5-971B-4AD84C788F81}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B09E75AE-F486-4135-A76A-8D3D22DB80F7}
+	EndGlobalSection
+EndGlobal
