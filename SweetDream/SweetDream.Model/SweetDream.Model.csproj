@@ -57,6 +57,7 @@
     <Compile Include="Entidades\Cartao.cs" />
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Endereco.cs" />
+    <Compile Include="Entidades\Logon.cs" />
     <Compile Include="Entidades\Produto.cs" />
     <Compile Include="Entidades\Produtos.cs" />
     <Compile Include="Entidades\Sexo.cs" />

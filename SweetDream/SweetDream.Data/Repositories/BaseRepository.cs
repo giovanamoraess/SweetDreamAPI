@@ -10,8 +10,8 @@ namespace SweetDream.Data.Repositories
 {
     public abstract class BaseRepository<TEntity> where TEntity : class
     {
-        IMongoDatabase database;
-        IMongoCollection<TEntity> collection; 
+        protected IMongoDatabase database;
+        protected IMongoCollection<TEntity> collection; 
         public BaseRepository(Context context)
         {
             this.database = context.database;

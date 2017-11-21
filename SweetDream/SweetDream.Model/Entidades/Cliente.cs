@@ -9,6 +9,11 @@ namespace SweetDream.Model.Entidades
 {
     public class Cliente
     {
+        public Cliente()
+        {
+            this.cartoes = new List<Cartao>();
+        }
+
         public ObjectId _id { get; set; }
         public string email { get; set; }
         public string senha { get; set; }

@@ -1,0 +1,62 @@
+{
+	"variables": [],
+	"info": {
+		"name": "API",
+		"_postman_id": "c98abbc1-8ebe-a53e-5a76-52cf6d7c9bc7",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar Conta",
+			"request": {
+				"url": "http://localhost:52926/api/cliente/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"nicholas@nicholas.com\",\n\t\"senha\": \"123456\",\n\t\"nome\" : \"Nicholas\",\n\t\"dataNascimento\": \"12/10/1993\",\n\t\"sexo\": 0,\n\t\"telefone\": \"994049268\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Logon",
+			"request": {
+				"url": "http://localhost:52926/api/cliente/logon",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"nicholas@nicholas.com\",\n\t\"senha\": \"123456\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Carrinho",
+			"request": {
+				"url": "http://localhost:52926/api/carrinho/5a136cb31c08d82c680dbbf2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Deve ser passado o id do Cliente na URL"
+			},
+			"response": []
+		}
+	]
+}
