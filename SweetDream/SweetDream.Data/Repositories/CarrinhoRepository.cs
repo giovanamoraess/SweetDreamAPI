@@ -9,24 +9,18 @@ using System.Threading.Tasks;
 
 namespace SweetDream.Data.Repositories
 {
-    public class ClienteRepository : BaseRepository<Cliente>
+    public class CarrinhoRepository : BaseRepository<Carrinho>
     {
         IMongoDatabase database;
-        public ClienteRepository(Context context)
+        public CarrinhoRepository(Context context)
             : base(context)
         {
             this.database = context.database;
         }
 
-        public Cliente Logon(Logon logon)
+        public Carrinho GetCarrinho(string id)
         {
-            var filtro = Builders<Cliente>.Filter.Eq(c => c.email, logon.email);
-            return collection.Find(filtro).FirstOrDefault();
-        }
-
-        public Cliente FindById(string id)
-        {
-            var filtro = Builders<Cliente>.Filter.Eq(c => c._id, ObjectId.Parse(id));
+            var filtro = Builders<Carrinho>.Filter.Eq(c => c.cliente._id, ObjectId.Parse(id));
             return collection.Find(filtro).FirstOrDefault();
         }
     }

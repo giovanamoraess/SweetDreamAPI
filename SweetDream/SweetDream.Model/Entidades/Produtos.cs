@@ -1,4 +1,6 @@
-﻿namespace SweetDream.Model.Entidades
+﻿using MongoDB.Bson;
+
+namespace SweetDream.Model.Entidades
 {
     public class Produtos
     {
