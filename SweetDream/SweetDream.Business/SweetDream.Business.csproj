@@ -67,6 +67,7 @@
     <Compile Include="Base\BaseBusiness.cs" />
     <Compile Include="CarrinhoBusiness.cs" />
     <Compile Include="ClienteBusiness.cs" />
+    <Compile Include="ProdutoBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
