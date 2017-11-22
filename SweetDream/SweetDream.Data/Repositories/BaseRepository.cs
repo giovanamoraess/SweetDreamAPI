@@ -23,5 +23,10 @@ namespace SweetDream.Data.Repositories
             collection.InsertOne(entidade);
             return entidade;
         }
+
+        public virtual List<TEntity> RetrieveAll()
+        {
+            return collection.Find(_ => true).ToList();
+        }
     }
 }

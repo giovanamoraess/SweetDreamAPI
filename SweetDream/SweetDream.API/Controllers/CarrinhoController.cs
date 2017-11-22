@@ -32,5 +32,32 @@ namespace SweetDream.API.Controllers
                 throw;
             }
         }
+
+        [HttpPost]
+        [Route("api/carrinho/adicionarItem")]
+        public Carrinho AdicionarItem(AdicionarItem item)
+        {
+            carrinhoBusiness.AdicionarItem(item);
+
+            return carrinhoBusiness.GetCarrinho(item.idCliente);
+        }
+
+        [HttpPost]
+        [Route("api/carrinho/removerItem")]
+        public Carrinho RemoverItem(RemoverItem item)
+        {
+            carrinhoBusiness.RemoverItem(item);
+
+            return carrinhoBusiness.GetCarrinho(item.idCliente);
+        }
+
+        [HttpPost]
+        [Route("api/carrinho/limpar/{idCliente}")]
+        public Carrinho RemoverItem(string idCliente)
+        {
+            carrinhoBusiness.LimparCarrinho(idCliente);
+
+            return carrinhoBusiness.GetCarrinho(idCliente);
+        }
     }
 }

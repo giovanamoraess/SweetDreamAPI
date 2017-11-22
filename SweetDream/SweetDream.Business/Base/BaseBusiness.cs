@@ -17,5 +17,10 @@ namespace SweetDream.Business.Base
         {
             return EntityRepository.Create(entity);
         }
+
+        public virtual List<TEntity> RetrieveAll()
+        {
+            return EntityRepository.RetrieveAll();
+        }
     }
 }

@@ -23,5 +23,11 @@ namespace SweetDream.Data.Repositories
             var filtro = Builders<Carrinho>.Filter.Eq(c => c.cliente._id, ObjectId.Parse(id));
             return collection.Find(filtro).FirstOrDefault();
         }
+
+        public void UpdateCarrinho(Carrinho carrinho)
+        {
+            var filtro = Builders<Carrinho>.Filter.Eq(c => c._id, carrinho._id);
+            collection.ReplaceOne(filtro, carrinho);
+        }
     }
 }
