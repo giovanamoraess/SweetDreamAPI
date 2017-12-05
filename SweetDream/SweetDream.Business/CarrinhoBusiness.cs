@@ -29,7 +29,17 @@ namespace SweetDream.Business
         {
             var carrinho = Repository.GetCarrinho(item.idCliente);
 
+            if (carrinho == null)
+            {
+                throw new Exception("Carrinho não encontrado");
+            }
+
             var produto = produtoBusiness.GetById(item.idProduto);
+
+            if (produto == null)
+            {
+                throw new Exception("Produto não encontrado");
+            }
 
             carrinho.produtos.Add(new Produtos() { produto = produto, quantidade = item.quantidade });
 
@@ -39,6 +49,12 @@ namespace SweetDream.Business
         public void RemoverItem(RemoverItem item)
         {
             var carrinho = Repository.GetCarrinho(item.idCliente);
+
+            if (carrinho?.produtos == null)
+            {
+                throw new Exception("Carrinho não encontrado");
+            }
+
             var itemDeletar = carrinho.produtos.FirstOrDefault(p => p.produto._id == ObjectId.Parse(item.idProduto));
 
             if(itemDeletar != null)
@@ -66,6 +82,12 @@ namespace SweetDream.Business
         public void LimparCarrinho(string idCliente)
         {
             var carrinho = Repository.GetCarrinho(idCliente);
+
+            if (carrinho == null)
+            {
+                throw new Exception("Carrinho não encontrado");
+            }
+
             carrinho.produtos = new List<Produtos>();
             Repository.UpdateCarrinho(carrinho);
         }
