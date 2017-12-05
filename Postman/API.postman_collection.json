@@ -57,6 +57,97 @@
 				"description": "Deve ser passado o id do Cliente na URL"
 			},
 			"response": []
+		},
+		{
+			"name": "Cadastrar Produto",
+			"request": {
+				"url": "http://localhost:52926/api/produto/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Chocolate Branco\",\n\t\"valor\": 2.3\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Todos os Produtos",
+			"request": {
+				"url": "http://localhost:52926/api/produto/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar Item no carrinho",
+			"request": {
+				"url": "http://localhost:52926/api/carrinho/adicionarItem",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"quantidade\": 10,\n\t\"idCliente\": \"5a136cb31c08d82c680dbbf2\",\n\t\"idProduto\": \"5a14ac491c08d83178852c0f\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Remover Item",
+			"request": {
+				"url": "http://localhost:52926/api/carrinho/removerItem",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"quantidade\": 9,\n\t\"idCliente\": \"5a136cb31c08d82c680dbbf2\",\n\t\"idProduto\": \"5a14ac491c08d83178852c0f\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Limpar Carrinho",
+			"request": {
+				"url": "http://localhost:52926/api/carrinho/limpar/5a136cb31c08d82c680dbbf2",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n}"
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }
