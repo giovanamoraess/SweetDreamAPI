@@ -3,6 +3,9 @@ using SweetDream.Data.Repositories;
 using SweetDream.Model.Entidades;
 using SweetDream.Data;
 using System;
+using System.Net.Http;
+using System.Net;
+using SweetDream.Infrastructure.Excepetion;
 
 namespace SweetDream.Business
 {
@@ -21,12 +24,12 @@ namespace SweetDream.Business
 
             if(cliente == null)
             {
-                throw new Exception("Cliente não encontrado");
+                throw new BaseBusinessException("Cliente não encontrado");
             }
 
             if(cliente.senha != logon.senha)
             {
-                throw new Exception("Senha Invalida");
+                throw new BaseBusinessException("Senha Invalida");
             }
 
             return cliente;
@@ -35,6 +38,16 @@ namespace SweetDream.Business
         public Cliente FindById(string id)
         {
             return Repository.FindById(id);
+        }
+
+        public override Cliente Create(Cliente entity)
+        {
+            if(Repository.FindByEmail(entity.email) != null)
+            {
+                throw new BaseBusinessException("Usuário já cadastrado");
+            }
+
+            return base.Create(entity);
         }
     }
 }

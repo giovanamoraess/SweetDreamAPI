@@ -1,10 +1,12 @@
 ﻿using SweetDream.Business;
+using SweetDream.Infrastructure.Excepetion;
 using SweetDream.Model.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.ServiceModel.Web;
 using System.Web;
 using System.Web.Http;
 
@@ -37,9 +39,13 @@ namespace SweetDream.API.Controllers
 
                 return result;
             }
-            catch
+            catch (BaseBusinessException e)
             {
-                throw;
+                throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.BadRequest) { ReasonPhrase = HttpStatusCode.BadRequest.ToString(), Content = new StringContent(e.Message) });
+            }
+            catch (Exception e)
+            {
+                throw e;
             }
         }
 
@@ -51,10 +57,13 @@ namespace SweetDream.API.Controllers
             {
                 return clienteBusiness.Logon(logon);
             }
+            catch(BaseBusinessException e)
+            {
+                throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.Forbidden) { ReasonPhrase = HttpStatusCode.Forbidden.ToString(), Content = new StringContent(e.Message) });
+            }
             catch(Exception e)
             {
                 throw e;
-                //throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.BadRequest) { ReasonPhrase = e.Message, Content = new StringContent(e.Message) });
             }
         }
     }
