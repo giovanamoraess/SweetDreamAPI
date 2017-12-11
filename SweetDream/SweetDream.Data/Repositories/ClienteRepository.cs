@@ -29,5 +29,11 @@ namespace SweetDream.Data.Repositories
             var filtro = Builders<Cliente>.Filter.Eq(c => c._id, ObjectId.Parse(id));
             return collection.Find(filtro).FirstOrDefault();
         }
+
+        public Cliente FindByEmail(string email)
+        {
+            var filtro = Builders<Cliente>.Filter.Eq(c => c.email, email);
+            return collection.Find(filtro).FirstOrDefault();
+        }
     }
 }

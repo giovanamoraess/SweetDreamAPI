@@ -13,15 +13,8 @@ namespace SweetDream.Data
 
         public Context()
         {
-            var settings = new MongoClientSettings()
-            {
-                ServerSelectionTimeout = new TimeSpan(0, 0, 5),
-                Server = new MongoServerAddress("localhost", 27017)
-            };
-
-            var client = new MongoClient(settings);
-
-            database = client.GetDatabase("teste");
+            var client = new MongoClient("mongodb://nicholas:nicholas@ds133166.mlab.com:33166/sweetdream");
+            database = client.GetDatabase("sweetdream");
         }
     }
 }

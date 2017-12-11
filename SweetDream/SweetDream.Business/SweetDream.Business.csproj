@@ -53,6 +53,7 @@
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.0.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -74,6 +75,10 @@
     <ProjectReference Include="..\SweetDream.Data\SweetDream.Data.csproj">
       <Project>{00A80B4F-A585-4027-90A3-D9A06981AF25}</Project>
       <Name>SweetDream.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SweetDream.Infrastructure\SweetDream.Infrastructure.csproj">
+      <Project>{916A9464-4D2B-4FF5-971B-4AD84C788F81}</Project>
+      <Name>SweetDream.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\SweetDream.Model\SweetDream.Model.csproj">
       <Project>{4BBC1135-D19D-4423-AED3-79E61FD7140E}</Project>
