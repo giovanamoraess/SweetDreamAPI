@@ -21,7 +21,7 @@ namespace SweetDream.Business
             this.carrinhoBusiness = carrinhoBusiness;
         }
 
-        public Vendas FinalizarVenda(string id)
+        public Vendas FinalizarVenda(string id, Vendas venda)
         {
             var carrinho = carrinhoBusiness.GetCarrinho(id);
 
@@ -30,9 +30,13 @@ namespace SweetDream.Business
                 throw new BaseBusinessException("Carrinho Vazio");
             }
 
-            var vendas = new Vendas() { produtos = carrinho.produtos, cliente = carrinho.cliente, data = DateTime.Now };
+            venda.produtos = carrinho.produtos;
+            venda.cliente = carrinho.cliente;
+            venda.data = DateTime.Now;
 
-            return Repository.Create(vendas);
+            var result = Repository.Create(venda);
+            carrinhoBusiness.LimparCarrinho(carrinho.cliente._id.ToString());
+            return result;
         }
 
         public List<Vendas> FindById(string FindByClientId)

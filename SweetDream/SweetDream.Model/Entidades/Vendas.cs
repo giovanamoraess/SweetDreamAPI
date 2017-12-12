@@ -13,5 +13,8 @@ namespace SweetDream.Model.Entidades
         public Cliente cliente { get; set; }
         public List<Produtos> produtos { get; set; }
         public DateTime data { get; set; }
+        public Status status { get; set; }
+        public Endereco endereco { get; set; }
+        public Cartao cartao { get; set; }
     }
 }
