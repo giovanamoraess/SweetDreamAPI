@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\BaseBusiness.cs" />
+    <Compile Include="VendaBusiness.cs" />
     <Compile Include="CarrinhoBusiness.cs" />
     <Compile Include="ClienteBusiness.cs" />
     <Compile Include="ProdutoBusiness.cs" />
