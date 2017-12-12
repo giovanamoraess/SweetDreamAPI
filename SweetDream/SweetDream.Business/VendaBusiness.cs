@@ -14,28 +14,24 @@ namespace SweetDream.Business
     {
         private VendaRepository Repository { get { return (VendaRepository)EntityRepository; } }
         private CarrinhoBusiness carrinhoBusiness;
+        private ClienteBusiness clienteBusiness;
 
-        public VendaBusiness(Context context, CarrinhoBusiness carrinhoBusiness)
+        public VendaBusiness(Context context, CarrinhoBusiness carrinhoBusiness, ClienteBusiness clienteBusiness)
         {
             EntityRepository = new VendaRepository(context);
             this.carrinhoBusiness = carrinhoBusiness;
+            this.clienteBusiness = clienteBusiness;
         }
 
         public Vendas FinalizarVenda(string id, Vendas venda)
         {
-            var carrinho = carrinhoBusiness.GetCarrinho(id);
+            var cliente = clienteBusiness.FindById(id);
 
-            if (carrinho == null || !carrinho.produtos.Any())
-            {
-                throw new BaseBusinessException("Carrinho Vazio");
-            }
-
-            venda.produtos = carrinho.produtos;
-            venda.cliente = carrinho.cliente;
+            venda.produtos = venda.produtos;
+            venda.cliente = cliente;
             venda.data = DateTime.Now;
 
             var result = Repository.Create(venda);
-            carrinhoBusiness.LimparCarrinho(carrinho.cliente._id.ToString());
             return result;
         }
 
