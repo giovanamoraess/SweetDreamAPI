@@ -152,7 +152,7 @@
 		{
 			"name": "Finalizar Venda",
 			"request": {
-				"url": "http://localhost:52926/api/carrinho/finalizar/5a29b8c91c08d84224089582",
+				"url": "http://localhost/SweetDream.API/api/carrinho/finalizar/5a29b8c91c08d84224089582",
 				"method": "POST",
 				"header": [
 					{
@@ -163,7 +163,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"endereco\": {\n\t\t\"rua\": \"Avenida bla\",\n\t\t\"numero\": \"1212\",\n\t\t\"bairro\": \"Jd blb\",\n\t\t\"CEP\": \"123123213\",\n\t\t\"cidade\": \"Campinas\",\n\t\t\"estado\": \"SP\"\n\t},\n\t\"cartao\": {\n\t\t\"bandeira\": 0,\n\t\t\"numero\": \"12212321321321312322\",\n\t\t\"CCV\": \"123\",\n\t\t\"nome\": \"NICHOLAS GIUDICE\",\n\t\t\"mesValidade\": \"12\",\n\t\t\"anoValidade\": \"2018\"\n\t}\n}"
+					"raw": "{\n\t\"produtos\":[\n\t\t{\n\t\t\t\"quantidade\": 1,\n\t\t\t\"produto\": {\n\t\t\t\t\"nome\": \"Bla\",\n\t\t\t\t\"valor\": 2.5\n\t\t\t}\n\t\t},\n\t\t{\n\t\t\t\"quantidade\": 4,\n\t\t\t\"produto\": {\n\t\t\t\t\"nome\": \"BlaBla\",\n\t\t\t\t\"valor\": 3\n\t\t\t}\n\t\t}\n\t],\n\t\"endereco\": {\n\t\t\"rua\": \"Avenida bla\",\n\t\t\"numero\": \"1212\",\n\t\t\"bairro\": \"Jd blb\",\n\t\t\"CEP\": \"123123213\",\n\t\t\"cidade\": \"Campinas\",\n\t\t\"estado\": \"SP\"\n\t},\n\t\"cartao\": {\n\t\t\"bandeira\": 0,\n\t\t\"numero\": \"12212321321321312322\",\n\t\t\"CCV\": \"123\",\n\t\t\"nome\": \"NICHOLAS GIUDICE\",\n\t\t\"mesValidade\": \"12\",\n\t\t\"anoValidade\": \"2018\"\n\t}\n}"
 				},
 				"description": ""
 			},
