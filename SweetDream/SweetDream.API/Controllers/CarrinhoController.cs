@@ -13,11 +13,13 @@ namespace SweetDream.API.Controllers
     {
         private readonly CarrinhoBusiness carrinhoBusiness;
         private readonly ClienteBusiness clienteBusiness;
+        private readonly VendaBusiness vendaBusiness;
 
-        public CarrinhoController(CarrinhoBusiness carrinhoBusiness, ClienteBusiness clienteBusiness)
+        public CarrinhoController(CarrinhoBusiness carrinhoBusiness, ClienteBusiness clienteBusiness, VendaBusiness vendaBusiness)
         {
             this.carrinhoBusiness = carrinhoBusiness;
             this.clienteBusiness = clienteBusiness;
+            this.vendaBusiness = vendaBusiness;
         }
 
         [HttpGet]
@@ -58,6 +60,20 @@ namespace SweetDream.API.Controllers
             carrinhoBusiness.LimparCarrinho(idCliente);
 
             return carrinhoBusiness.GetCarrinho(idCliente);
+        }
+
+        [HttpPost]
+        [Route("api/carrinho/finalizar/{idCliente}")]
+        public Vendas Finalizar(string idCliente)
+        {
+            return vendaBusiness.FinalizarVenda(idCliente); ;
+        }
+
+        [HttpGet]
+        [Route("api/carrinho/vendas/{idCliente}")]
+        public List<Vendas> GetVendas(string idCliente)
+        {
+            return vendaBusiness.FindById(idCliente); ;
         }
     }
 }
