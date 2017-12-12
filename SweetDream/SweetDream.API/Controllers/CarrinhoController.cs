@@ -64,9 +64,9 @@ namespace SweetDream.API.Controllers
 
         [HttpPost]
         [Route("api/carrinho/finalizar/{idCliente}")]
-        public Vendas Finalizar(string idCliente)
+        public Vendas Finalizar(string idCliente, Vendas vendas)
         {
-            return vendaBusiness.FinalizarVenda(idCliente); ;
+            return vendaBusiness.FinalizarVenda(idCliente, vendas);
         }
 
         [HttpGet]
