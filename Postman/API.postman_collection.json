@@ -103,7 +103,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"quantidade\": 10,\n\t\"idCliente\": \"5a136cb31c08d82c680dbbf2\",\n\t\"idProduto\": \"5a14ac491c08d83178852c0f\"\n}"
+					"raw": "{\n\t\"quantidade\": 10,\n\t\"idCliente\": \"5a29b8c91c08d84224089582\",\n\t\"idProduto\": \"5a2f1b8f1c08d835989ee98d\"\n}"
 				},
 				"description": ""
 			},
@@ -145,6 +145,37 @@
 					"mode": "raw",
 					"raw": "{\n}"
 				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Finalizar Venda",
+			"request": {
+				"url": "http://localhost:52926/api/carrinho/finalizar/5a29b8c91c08d84224089582",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"endereco\": {\n\t\t\"rua\": \"Avenida bla\",\n\t\t\"numero\": \"1212\",\n\t\t\"bairro\": \"Jd blb\",\n\t\t\"CEP\": \"123123213\",\n\t\t\"cidade\": \"Campinas\",\n\t\t\"estado\": \"SP\"\n\t},\n\t\"cartao\": {\n\t\t\"bandeira\": 0,\n\t\t\"numero\": \"12212321321321312322\",\n\t\t\"CCV\": \"123\",\n\t\t\"nome\": \"NICHOLAS GIUDICE\",\n\t\t\"mesValidade\": \"12\",\n\t\t\"anoValidade\": \"2018\"\n\t}\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Vendas",
+			"request": {
+				"url": "http://localhost:52926/api/carrinho/vendas/5a29b8c91c08d84224089582",
+				"method": "GET",
+				"header": [],
+				"body": {},
 				"description": ""
 			},
 			"response": []
